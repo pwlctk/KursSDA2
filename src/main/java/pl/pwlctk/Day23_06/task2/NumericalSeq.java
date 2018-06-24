@@ -1,8 +1,8 @@
 package pl.pwlctk.Day23_06.task2;
 
-public class NumericalSeq {
+class NumericalSeq {
 
-    public static void showSequences(int n) {
+    static void showSequences(int n) {
 
         //1--------------------------------------------
         for (int i = 1; i < n * 2; i += 2) {

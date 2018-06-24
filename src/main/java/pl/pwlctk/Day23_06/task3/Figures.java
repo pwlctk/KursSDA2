@@ -1,6 +1,6 @@
 package pl.pwlctk.Day23_06.task3;
 
-public class Figures {
+class Figures {
 
     static void triangle(int w) {
         StringBuilder symbol = new StringBuilder("*");
