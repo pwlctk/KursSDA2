@@ -8,7 +8,7 @@ import java.util.List;
 
 class Sum {
     static List<Integer> readFile() {
-        String path = "src\\pl\\pwlctk\\Day23_06\\task4\\numbers.txt";
+        String path = "src/main/resources/numbers.txt";
         String line;
         List<Integer> list = new ArrayList<>();
         try {
