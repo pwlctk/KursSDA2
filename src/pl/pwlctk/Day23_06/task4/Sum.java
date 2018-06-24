@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Sum {
+class Sum {
     static List<Integer> readFile() {
         String path = "src\\pl\\pwlctk\\Day23_06\\task4\\numbers.txt";
         String line;
@@ -16,6 +16,7 @@ public class Sum {
             while ((line = br.readLine()) != null) {
                 list.add(Integer.parseInt(line));
             }
+            br.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
