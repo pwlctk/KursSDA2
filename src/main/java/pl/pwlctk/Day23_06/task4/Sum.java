@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 class Sum {
-    static List<Integer> readFile() {
+    static List<Integer> readData() {
         String path = "src/main/resources/numbers.txt";
         String line;
         List<Integer> list = new ArrayList<>();
@@ -21,6 +21,18 @@ class Sum {
             e.printStackTrace();
         }
         return list;
+    }
+
+    static List<Integer> computeResult(List<Integer> list) {
+        List<Integer> sumList = new ArrayList<>();
+        sumList.add(list.get(0));
+        for (int i = 1; i < list.size(); i++) {
+            sumList.add(list.get(i) + sumList.get(i - 1));
+
+        }
+
+        return sumList;
+
     }
 }
 
