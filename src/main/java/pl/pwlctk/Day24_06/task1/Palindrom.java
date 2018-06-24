@@ -24,20 +24,24 @@ class Palindrom {
         return list;
     }
 
+    private static boolean isPalindrom(String word) {
+        if (word.length() % 2 != 0) {
+            for (int j = 0; j < word.length() / 2; j++) {
+                if (word.charAt(j) != word.charAt(word.length() - 1 - j)) {
+                    return false;
+                }
+            }
+        } else {
+            return false;
+        }
+        return true;
+    }
+
     static List<String> showPalindroms(List<String> list) {
         List<String> palindromList = new ArrayList<>();
         for (int i = 0; i < list.size(); i++) {
-            if (list.get(i).length() % 2 != 0) {
-                boolean isPalindrom = true;
-                String checkPalindrom = list.get(i);
-                for (int j = 0; j < checkPalindrom.length() / 2; j++) {
-                    if (checkPalindrom.charAt(j) != checkPalindrom.charAt(checkPalindrom.length() - 1 - j)) {
-                        isPalindrom = false;
-                    }
-                }
-                if (isPalindrom) {
-                    palindromList.add(list.get(i));
-                }
+            if (isPalindrom(list.get(i))) {
+                palindromList.add(list.get(i));
             }
         }
         return palindromList;
