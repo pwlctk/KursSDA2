@@ -2,10 +2,7 @@ package pl.pwlctk.HomeTasks.matrixCode;
 
 class MatrixCodeArray {
     static String encode(String content) {
-        int key = (int) Math.sqrt(content.length());
-        if (key * key < content.length()) {
-            key++;
-        }
+        int key = (int) Math.ceil(Math.sqrt(content.length()));
         char[][] decryptMatrix = new char[key][key];
         StringBuilder encoded = new StringBuilder();
 

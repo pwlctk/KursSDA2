@@ -2,7 +2,7 @@ package pl.pwlctk.Day24_06.task3;
 
 public class Main {
     public static void main(String[] args) {
-        String word = "KURS PROGRAMOWANIA W JAVIE";
+        String word = "KURS PROGRAMOWANIA W JAVIE XYZ";
         String encryptionWord = Cezar.encryption(word);
         String decryptionWord = Cezar.decryption(encryptionWord);
 
@@ -12,6 +12,5 @@ public class Main {
         System.out.println(encryptionWord);
         System.out.println("\nZdanie po odszyfrowaniu:");
         System.out.println(decryptionWord);
-
     }
 }

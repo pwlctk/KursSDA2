@@ -7,8 +7,11 @@ class Cezar {
         char character;
         for (int i = 0; i < word.length(); i++) {
             character = word.charAt(i);
-            character += 3;
+            if (character != ' ') {
+                character += 3;
+            }
             encryptionWord.append(character);
+
         }
         return encryptionWord.toString();
     }
@@ -18,8 +21,11 @@ class Cezar {
         char character;
         for (int i = 0; i < word.length(); i++) {
             character = word.charAt(i);
-            character -= 3;
+            if (character != ' ') {
+                character -= 3;
+            }
             decryptionWord.append(character);
+
         }
         return decryptionWord.toString();
     }

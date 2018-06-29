@@ -2,10 +2,9 @@ package pl.pwlctk.HomeTasks.matrixCode;
 
 class MatrixCode {
     static String encode(String content) {
-        int key = (int) Math.sqrt(content.length());
-        if (key * key < content.length()) {
-            key++;
-        }
+        int key = (int) Math.ceil(Math.sqrt(content.length()));
+        System.out.println(content.length());
+        System.out.println(key);
         StringBuilder encoded = new StringBuilder();
         int charIndex = 0;
         int matrixSize = key * key;

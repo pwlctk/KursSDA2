@@ -2,9 +2,10 @@ package pl.pwlctk.HomeTasks.matrixCode;
 
 public class Main {
     public static void main(String[] args) {
-        String message = "Kurs programowania w Javie".toUpperCase();
+        String message = "Kurs programowania".toUpperCase();
         String encryptedMessage = MatrixCode.encode(message);
         String decryptedMessage = MatrixCode.encode(encryptedMessage);
+
         System.out.println("Wiadomość do zaszyfrowania: " + message);
         System.out.println();
         System.out.println("Metoda optymalna: ");
