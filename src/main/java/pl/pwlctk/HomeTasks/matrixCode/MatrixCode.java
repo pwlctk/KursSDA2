@@ -1,18 +1,11 @@
 package pl.pwlctk.HomeTasks.matrixCode;
 
 class MatrixCode {
-    static String encrypt(String content) {
-        int key = (int) Math.sqrt(content.length()) + 1;
-        return encode(content, key);
-    }
-
-    static String decrypt(String content) {
+    static String encode(String content) {
         int key = (int) Math.sqrt(content.length());
-        return encode(content, key);
-    }
-
-    //Aby nie powtarzać dwa razy tego samego kodu dodałem prywatną metodę encode
-    private static String encode(String content, int key) {
+        if (key * key < content.length()) {
+            key++;
+        }
         StringBuilder encoded = new StringBuilder();
         int charIndex = 0;
         int matrixSize = key * key;
