@@ -4,9 +4,19 @@ public class Main {
     public static void main(String[] args) {
         List<String> list = new LinkedList<>();
 
-        list.append("Drzewo");
-        list.append("Samochód");
-        System.out.println(list.size());
-        System.out.println(list.get(1));
+        list.add("Drzewo");
+        list.add("Samochód");
+        list.add("Dom");
+
+        list.add(0, "Chmura");
+        list.add(2, "Traktor");
+        list.add(3, "Telefon");
+
+        System.out.println(list);
+        System.out.println();
+        list.remove(0);
+        System.out.println(list);
+
+        System.out.println(list.get(0));
     }
 }

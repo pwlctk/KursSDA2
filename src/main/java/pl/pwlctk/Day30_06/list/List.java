@@ -1,10 +1,11 @@
 package pl.pwlctk.Day30_06.list;
 
 public interface List<T> {
-    void append(T element);
     void add(T element);
+    void add(int index, T element);
     T get(int index);
-    void remove(int index);
-    boolean isEmpty();
+    T remove(int index);
     int size();
+    boolean isEmpty();
+
 }

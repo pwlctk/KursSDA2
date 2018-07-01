@@ -6,7 +6,7 @@ public class LinkedQueue<T> implements Queue<T> {
     private QueueElement<T> last;
 
 
-    public LinkedQueue() {
+    LinkedQueue() {
         this.queueSize = 0;
         this.first = null;
         this.last = null;
