@@ -4,11 +4,13 @@ class LinkedStack<T> implements Stack<T>  {
     private int stackSize;
     private StackElement<T> top;
 
+    @Override
     public void push(T element) {
         stackSize++;
         top = new StackElement<>(element, top);
     }
 
+    @Override
     public T pop() {
         if (stackSize > 0) {
             stackSize--;
@@ -19,6 +21,7 @@ class LinkedStack<T> implements Stack<T>  {
         return null;
     }
 
+    @Override
     public T peek() {
         if (stackSize > 0) {
             return top.value;
@@ -27,10 +30,12 @@ class LinkedStack<T> implements Stack<T>  {
         }
     }
 
+    @Override
     public boolean isEmpty() {
         return stackSize == 0;
     }
 
+    @Override
     public int size() {
         return stackSize;
     }

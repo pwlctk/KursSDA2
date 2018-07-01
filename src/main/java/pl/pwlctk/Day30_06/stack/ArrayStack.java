@@ -15,6 +15,7 @@ class ArrayStack<T> implements Stack<T>{
         this.maxSize = maxSize;
     }
 
+    @Override
     public void push(T element) {
         if (size() < maxSize) {
             list.add(element);
@@ -25,6 +26,7 @@ class ArrayStack<T> implements Stack<T>{
         }
     }
 
+    @Override
     public T pop() {
         if (isEmpty()) {
             return null;
@@ -40,6 +42,7 @@ class ArrayStack<T> implements Stack<T>{
         }
     }
 
+    @Override
     public T peek() {
         if (isEmpty()) {
             return null;
@@ -48,10 +51,12 @@ class ArrayStack<T> implements Stack<T>{
         }
     }
 
+    @Override
     public boolean isEmpty() {
         return stackSize == 0;
     }
 
+    @Override
     public int size() {
         return stackSize;
     }
