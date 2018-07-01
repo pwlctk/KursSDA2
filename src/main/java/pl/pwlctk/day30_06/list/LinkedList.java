@@ -1,6 +1,5 @@
 package pl.pwlctk.day30_06.list;
 
-
 public class LinkedList<T> implements List<T> {
     private ListElement<T> first;
     private ListElement<T> last;
@@ -8,12 +7,12 @@ public class LinkedList<T> implements List<T> {
 
     @Override
     public void add(T element) {
-        ListElement<T> listElement = new ListElement<>(element);
+        ListElement<T> newElement = new ListElement<>(element);
 
         if (isEmpty()) {
-            first = last = listElement;
+            first = last = newElement;
         } else {
-            last.nextElement = listElement;
+            last.nextElement = newElement;
             last.nextElement.previousElement = last;
             last = last.nextElement;
         }
@@ -83,15 +82,17 @@ public class LinkedList<T> implements List<T> {
             ListElement<T> elementToRemove = getElement(index);
             //Usuwanie pierwszego elementu
             if (elementToRemove.previousElement == null) {
-                first.nextElement.previousElement = null;
-                first = first.nextElement;
+                ListElement<T> secondElement = first.nextElement;
+                secondElement.previousElement = null;
+                first = secondElement;
                 return elementToRemove.value;
             }
 
             //Usuwanie ostatniego elementu
             else if (elementToRemove.nextElement == null) {
-                last.previousElement.nextElement = null;
-                last = last.previousElement;
+                ListElement<T> penultimateElement = last.previousElement;
+                penultimateElement.nextElement = null;
+                last = penultimateElement;
                 return elementToRemove.value;
             }
 
@@ -99,7 +100,6 @@ public class LinkedList<T> implements List<T> {
             else {
                 ListElement<T> previousElement = elementToRemove.previousElement;
                 ListElement<T> nextElement = elementToRemove.nextElement;
-
                 previousElement.nextElement = elementToRemove.nextElement;
                 nextElement.previousElement = previousElement;
                 return elementToRemove.value;
