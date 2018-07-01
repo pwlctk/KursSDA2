@@ -7,5 +7,6 @@ public interface List<T> {
     T remove(int index);
     int size();
     boolean isEmpty();
+    List<T> reversed();
 
 }

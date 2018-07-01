@@ -5,20 +5,13 @@ public class LinkedQueue<T> implements Queue<T> {
     private QueueElement<T> first;
     private QueueElement<T> last;
 
-
-    LinkedQueue() {
-        this.queueSize = 0;
-        this.first = null;
-        this.last = null;
-    }
-
     @Override
     public void push(T element) {
+        QueueElement<T> newElement = new QueueElement<>(element);
         if (isEmpty()) {
-            last = new QueueElement<>(element);
-            first = last;
+            first = last = newElement;
         } else {
-            last.nextElement = new QueueElement<>(element);
+            last.nextElement = newElement;
             last = last.nextElement;
         }
         queueSize++;
@@ -60,7 +53,6 @@ public class LinkedQueue<T> implements Queue<T> {
 
         QueueElement(K value) {
             this.value = value;
-            this.nextElement = null;
         }
     }
 }
