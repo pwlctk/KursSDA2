@@ -7,7 +7,7 @@ class ZigzagCipher {
         StringBuilder messageToEncrypt = new StringBuilder(message);
         //Aby dekodowanie dzialalo dlugosc wiadomości musi być podzielna przez 4 dlatego dodaje spacje na końcu
         if (messageToEncrypt.length() % 4 != 0) {
-            for (int i = 0; i < 4 -(message.length()%4); i++) {
+            for (int i = 0; i < 4 - (message.length() % 4); i++) {
                 messageToEncrypt.append(" ");
             }
         }
@@ -52,11 +52,11 @@ class ZigzagCipher {
         char[][] matrix = new char[railKey][message.length()];
 
         //zapełniam macierz gwiazdkami
-        for (int i = 0; i < railKey; i++) {
-            for (int j = 0; j < message.length(); j++) {
-                matrix[i][j] = '*';
-            }
-        }
+//        for (int i = 0; i < railKey; i++) {
+//            for (int j = 0; j < message.length(); j++) {
+//                matrix[i][j] = '*';
+//            }
+//        }
         int index = 0;
         int zigzag = 0;
         boolean downUp = true;
@@ -65,8 +65,7 @@ class ZigzagCipher {
         for (int i = 0; i < railKey; i++) {
             for (int j = 0; j < message.length(); j++) {
                 if (zigzag == i) {
-                    matrix[zigzag][j] = message.charAt(index);
-                    index++;
+                    matrix[zigzag][j] = message.charAt(index++);
                 }
                 if (downUp) {
                     zigzag++;
@@ -81,17 +80,36 @@ class ZigzagCipher {
         }
 
         //Wpisywanie wartości do StringBuildera
-        for (int i = 0; i < message.length(); i++) {
-            sentence.append(matrix[zigzag][i]);
-            if (downUp) {
-                zigzag++;
-            } else {
-                zigzag--;
-            }
-            if (zigzag == 0 || zigzag == railKey - 1) {
-                downUp = !downUp;
+        int j = 0;
+        downUp = true;
+        for (int i = 0; i < railKey; i++) {
+            while (sentence.length() < message.length()) {
+                sentence.append(matrix[i][j]);
+                j++;
+                if (downUp) {
+                    i++;
+                } else {
+                    i--;
+                }
+                if (i == 0 || i == railKey - 1) {
+                    downUp = !downUp;
+                }
             }
         }
+
+
+        //Wpisywanie wartości do StringBuildera
+//        for (int i = 0; i < message.length(); i++) {
+//            sentence.append(matrix[zigzag][i]);
+//            if (downUp) {
+//                zigzag++;
+//            } else {
+//                zigzag--;
+//            }
+//            if (zigzag == 0 || zigzag == railKey - 1) {
+//                downUp = !downUp;
+//            }
+//        }
 
         return sentence.toString().trim();
     }
