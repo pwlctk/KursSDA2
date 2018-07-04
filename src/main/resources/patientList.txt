@@ -1,0 +1,5 @@
+Janusz;Bąbel;Alkoholik;10
+Jan;Marudny;Złamana noga, połamana ręka;9
+Rafał;Kosmo;Ból brzucha, wymioty;7
+Juliusz;Kiszka;Zatrucie piwem;4
+Brajan;Nowak;Ból głowy;3
