@@ -3,10 +3,10 @@ package pl.pwlctk.hometasks.hospital;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
-class SorHospital {
+class Hospital {
     private Queue<Patient> patients;
 
-    SorHospital() {
+    Hospital() {
         patients = new PriorityQueue<>(new PatientPriority());
     }
 
@@ -32,7 +32,7 @@ class SorHospital {
 
     String viewPatient() {
         if (patients.isEmpty()) {
-            return "Brak pacjętów!";
+            return "Brak pacjentów!";
         } else {
             return patients.peek().getName() + " (" + patients.peek().getAilment() + ")";
         }

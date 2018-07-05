@@ -11,8 +11,8 @@ import java.util.Scanner;
 
 class DiskOperations {
 
-    static SorHospital readPatients(String fileName) {
-        SorHospital szpital = new SorHospital();
+    static Hospital readPatientsData(String fileName) {
+        Hospital szpital = new Hospital();
         String path = "src/main/resources/";
         try {
             File file = new File(path + fileName);
@@ -29,7 +29,7 @@ class DiskOperations {
         return szpital;
     }
 
-    static void savePatients(Queue queue, String fileName) {
+    static void savePatientsData(Queue queue, String fileName) {
         String path = "src/main/resources/" + fileName;
         StringBuilder content = new StringBuilder();
         //poprawione, aby na końcu pliku nie było zbędnego entera
