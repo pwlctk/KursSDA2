@@ -1,4 +1,4 @@
-package pl.pwlctk.hometasks.hospital;
+package pl.pwlctk.homeTasks.hospital;
 
 import java.util.PriorityQueue;
 import java.util.Queue;

@@ -1,4 +1,4 @@
-package pl.pwlctk.hometasks.matrixCode;
+package pl.pwlctk.homeTasks.matrixCode;
 
 class MatrixCodeArray {
     static String encode(String content) {

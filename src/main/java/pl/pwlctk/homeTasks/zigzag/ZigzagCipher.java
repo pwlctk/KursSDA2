@@ -1,4 +1,4 @@
-package pl.pwlctk.hometasks.zigzag;
+package pl.pwlctk.homeTasks.zigzag;
 
 class ZigzagCipher {
 

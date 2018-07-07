@@ -1,4 +1,4 @@
-package pl.pwlctk.hometasks.eratostenes;
+package pl.pwlctk.homeTasks.eratostenes;
 
 import java.util.ArrayList;
 import java.util.HashMap;

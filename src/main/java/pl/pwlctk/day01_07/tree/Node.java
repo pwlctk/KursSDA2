@@ -22,4 +22,5 @@ class Node {
     Node getRightChild() {
         return rightChild;
     }
+
 }

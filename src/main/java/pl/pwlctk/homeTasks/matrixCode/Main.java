@@ -1,4 +1,4 @@
-package pl.pwlctk.hometasks.matrixCode;
+package pl.pwlctk.homeTasks.matrixCode;
 
 public class Main {
     public static void main(String[] args) {

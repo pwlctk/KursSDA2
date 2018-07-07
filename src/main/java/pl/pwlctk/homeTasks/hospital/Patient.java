@@ -1,4 +1,4 @@
-package pl.pwlctk.hometasks.hospital;
+package pl.pwlctk.homeTasks.hospital;
 
 public class Patient {
     private String name;

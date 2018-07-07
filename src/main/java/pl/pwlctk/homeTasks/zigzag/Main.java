@@ -1,4 +1,4 @@
-package pl.pwlctk.hometasks.zigzag;
+package pl.pwlctk.homeTasks.zigzag;
 
 public class Main {
     public static void main(String[] args) {
